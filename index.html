@@ -1,14 +1,21 @@
 <!DOCTYPE html>
+<html ng-app="myModule">
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <title></title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-
 		<script src="/bower_components/angular/angular.js"></script>
     </head>
-    <body>
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+    <body ng-controller="myController">
+      <p ng-repeat="customer in customers">{{ customer.name }}</p>
+      <div>
+      	<h2 ng-controller="otherCtrl"> {{ users[0].name }}</h2>
+      </div>
     </body>
+
+   <!-- Add Javascript -->
+	<script src="test.js"></script>
+
 </html>
